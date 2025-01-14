@@ -1,0 +1,152 @@
+.location .heading h1 {
+  font-size: 3rem;
+  line-height: 2.5rem;
+}
+
+.location .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 250px;
+  width: 100%;
+  color: #fff;
+  z-index: 1;
+}
+
+.location .overlay::after {
+  content: "";
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  width: 85%;  
+  height: 80%;
+  background: rgb(15 28 47 / 40%);
+  z-index: -1;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);  
+}
+
+.location h5 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.location label {
+  color: #fff;
+  margin-right: 20px;
+  opacity: 0.8;
+}
+
+
+@media screen and (max-width: 1031px)  {
+  .location .overlay::after {
+    width: 90%; 
+    height: 90%; 
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .location .overlay::after {
+    width: 80%;   
+    height: 70%;
+  }
+}
+
+@media screen and (max-width: 1183px) {
+  .location .overlay::after {
+    top: 40%;
+    width: 60%;   
+    height: 60%; 
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .location .heading h1 {
+    font-size: 2.5rem;
+    line-height: 2rem;
+  }
+
+  .location .overlay::after {
+    top: 30%;
+    width: 60%;   
+    height: 50%; 
+  }
+
+  .location h5 {
+    font-size: 16px;
+  }
+
+  .location label {
+    font-size: 14px;
+  }
+
+  .location .overlay {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .location .heading h1 {
+    font-size: 2rem;
+    line-height: 1.8rem;
+  }
+
+  .location .overlay::after {
+    width: 50%; 
+    height: 40%;
+  }
+
+  .location h5 {
+    font-size: 14px;
+  }
+
+  .location label {
+    font-size: 13px;
+  }
+
+  .location .overlay {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .location .heading h1 {
+    font-size: 1.8rem;
+    line-height: 1.6rem;
+  }
+
+  .location .overlay::after {
+    top: 100%; 
+    left: 50%; 
+    width: 90%; 
+    height: 150%; 
+    transform: translate(-50%, -50%); 
+    background: rgb(15 28 47 / 40%);
+    border-radius: 5px;
+  }
+
+  .location h5 {
+    font-size: 14px;
+  }
+
+  .location label {
+    font-size: 12px;
+  }
+
+  .location .overlay {
+    height: auto; 
+    min-height: 150px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column; 
+  }
+
+  .location .grid {
+    grid-template-columns: 1fr !important; 
+  }
+}
